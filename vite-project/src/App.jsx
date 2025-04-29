@@ -5,6 +5,7 @@ import CardWrapper from './compenents/CardWrapper'
 import Logo from './compenents/Logo'
 import Title from './compenents/Name'
 import Description from './compenents/Description'
+import Toogle from './compenents/Toogle'
 
 function App() {
   const [extensionSources, setExtensionSources] = useState([]);
@@ -19,18 +20,19 @@ function App() {
   console.log(extensionSources);
   return (
     <main>
-      {extensionSources.map((extension) => (
-        <CardWrapper key={extension.id}>
-          <div className="logo-part">
+    {extensionSources.map((extension) => (
+      <CardWrapper key={extension.id}>
+        <div className="logo-part">
           <Logo imgSrc={extension.logo} />
-          </div>
-          <div className="right-part">
+        </div>
+        <div className="right-part">
           <Title title={extension.name} />
           <Description description={extension.description} />
-          </div>
-        </CardWrapper>
-      ))}
-    </main>
+          <Toogle />
+        </div>
+      </CardWrapper>
+    ))}
+  </main>
   );
 }
 export default App;
