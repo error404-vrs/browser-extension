@@ -2,24 +2,20 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to bottom, #f2f6ff, #eaf0ff);
   color: #111827;
-}
-
-.header {
   display: flex;
   align-items: center;
-  padding: 1rem;
-  gap: 0.6rem;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.header img {
-  width: 30px;
-  height: 30px;
-}
-
-.header h1 {
-  font-size: 1.2rem;
-  font-weight: 700;
-}
+header {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);}
 
 .title {
   font-size: 1.5rem;
@@ -27,7 +23,6 @@ body {
   padding: 0 1rem;
   margin-bottom: 0.5rem;
 }
-
 
 .card {
   background-color: white;
@@ -68,8 +63,6 @@ body {
   color: white;
 }
 
-/*  STYLE FOR THE TOOGLE BUTTON  */
-
 .card-bottom {
   position: absolute;
   bottom: 1rem;
@@ -86,7 +79,7 @@ body {
   height: 34px;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -130,7 +123,6 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
@@ -140,20 +132,18 @@ input:checked + .slider:before {
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  main {
+  .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    padding: 0 2rem 2rem;
-    align-items: stretch;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto; 
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    padding: 1rem;
   }
+
+  .card {
+    margin: 0;
+  }
+
   .title {
     font-size: 1.8rem;
   }
